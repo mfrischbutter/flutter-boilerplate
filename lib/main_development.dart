@@ -6,6 +6,6 @@ import 'package:flutter_boilerplate/start.dart';
 import 'gen/assets.gen.dart';
 
 void main() async {
-  await dotenv.load(fileName: Assets.env.envProduction);
+  await dotenv.load(fileName: Assets.env.envDevelopment);
   start();
 }

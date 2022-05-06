@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 
 // Package imports:
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter_boilerplate/app/widget/splash_screen.dart';
 
 // Project imports:
-import 'package:flutter_boilerplate/app/widget/app_start_page.dart';
 import 'package:flutter_boilerplate/feature/auth/widget/routes.dart';
 import 'package:flutter_boilerplate/feature/home/widget/routes.dart';
 
@@ -19,13 +19,11 @@ class AppRouteObserver extends AutoRouterObserver {
 }
 
 @AdaptiveAutoRouter(
-  replaceInRouteName: 'Page,Route',
+  replaceInRouteName: 'Screen,Route',
   routes: <AutoRoute>[
-    //RedirectRoute(path: '*', redirectTo: '/'),
-    AutoRoute(page: AppStartPage, initial: true),
+    AutoRoute(page: SplashScreen, initial: true),
     homeRouter,
-    signInRouter,
-    signUpRouter
+    loginRoute,
   ],
 )
 class $AppRouter {}

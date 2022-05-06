@@ -25,10 +25,6 @@ class _$AppStartStateTearOff {
     return const Unauthenticated();
   }
 
-  _InternetUnAvailable internetUnAvailable() {
-    return const _InternetUnAvailable();
-  }
-
   AppAuthenticated authenticated() {
     return const AppAuthenticated();
   }
@@ -43,7 +39,6 @@ mixin _$AppStartState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() unauthenticated,
-    required TResult Function() internetUnAvailable,
     required TResult Function() authenticated,
   }) =>
       throw _privateConstructorUsedError;
@@ -51,7 +46,6 @@ mixin _$AppStartState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? unauthenticated,
-    TResult Function()? internetUnAvailable,
     TResult Function()? authenticated,
   }) =>
       throw _privateConstructorUsedError;
@@ -59,7 +53,6 @@ mixin _$AppStartState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? unauthenticated,
-    TResult Function()? internetUnAvailable,
     TResult Function()? authenticated,
     required TResult orElse(),
   }) =>
@@ -68,7 +61,6 @@ mixin _$AppStartState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(Unauthenticated value) unauthenticated,
-    required TResult Function(_InternetUnAvailable value) internetUnAvailable,
     required TResult Function(AppAuthenticated value) authenticated,
   }) =>
       throw _privateConstructorUsedError;
@@ -76,7 +68,6 @@ mixin _$AppStartState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(Unauthenticated value)? unauthenticated,
-    TResult Function(_InternetUnAvailable value)? internetUnAvailable,
     TResult Function(AppAuthenticated value)? authenticated,
   }) =>
       throw _privateConstructorUsedError;
@@ -84,7 +75,6 @@ mixin _$AppStartState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(Unauthenticated value)? unauthenticated,
-    TResult Function(_InternetUnAvailable value)? internetUnAvailable,
     TResult Function(AppAuthenticated value)? authenticated,
     required TResult orElse(),
   }) =>
@@ -148,7 +138,6 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() unauthenticated,
-    required TResult Function() internetUnAvailable,
     required TResult Function() authenticated,
   }) {
     return initial();
@@ -159,7 +148,6 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? unauthenticated,
-    TResult Function()? internetUnAvailable,
     TResult Function()? authenticated,
   }) {
     return initial?.call();
@@ -170,7 +158,6 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? unauthenticated,
-    TResult Function()? internetUnAvailable,
     TResult Function()? authenticated,
     required TResult orElse(),
   }) {
@@ -185,7 +172,6 @@ class _$_Initial implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(Unauthenticated value) unauthenticated,
-    required TResult Function(_InternetUnAvailable value) internetUnAvailable,
     required TResult Function(AppAuthenticated value) authenticated,
   }) {
     return initial(this);
@@ -196,7 +182,6 @@ class _$_Initial implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(Unauthenticated value)? unauthenticated,
-    TResult Function(_InternetUnAvailable value)? internetUnAvailable,
     TResult Function(AppAuthenticated value)? authenticated,
   }) {
     return initial?.call(this);
@@ -207,7 +192,6 @@ class _$_Initial implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(Unauthenticated value)? unauthenticated,
-    TResult Function(_InternetUnAvailable value)? internetUnAvailable,
     TResult Function(AppAuthenticated value)? authenticated,
     required TResult orElse(),
   }) {
@@ -265,7 +249,6 @@ class _$Unauthenticated implements Unauthenticated {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() unauthenticated,
-    required TResult Function() internetUnAvailable,
     required TResult Function() authenticated,
   }) {
     return unauthenticated();
@@ -276,7 +259,6 @@ class _$Unauthenticated implements Unauthenticated {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? unauthenticated,
-    TResult Function()? internetUnAvailable,
     TResult Function()? authenticated,
   }) {
     return unauthenticated?.call();
@@ -287,7 +269,6 @@ class _$Unauthenticated implements Unauthenticated {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? unauthenticated,
-    TResult Function()? internetUnAvailable,
     TResult Function()? authenticated,
     required TResult orElse(),
   }) {
@@ -302,7 +283,6 @@ class _$Unauthenticated implements Unauthenticated {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(Unauthenticated value) unauthenticated,
-    required TResult Function(_InternetUnAvailable value) internetUnAvailable,
     required TResult Function(AppAuthenticated value) authenticated,
   }) {
     return unauthenticated(this);
@@ -313,7 +293,6 @@ class _$Unauthenticated implements Unauthenticated {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(Unauthenticated value)? unauthenticated,
-    TResult Function(_InternetUnAvailable value)? internetUnAvailable,
     TResult Function(AppAuthenticated value)? authenticated,
   }) {
     return unauthenticated?.call(this);
@@ -324,7 +303,6 @@ class _$Unauthenticated implements Unauthenticated {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(Unauthenticated value)? unauthenticated,
-    TResult Function(_InternetUnAvailable value)? internetUnAvailable,
     TResult Function(AppAuthenticated value)? authenticated,
     required TResult orElse(),
   }) {
@@ -337,123 +315,6 @@ class _$Unauthenticated implements Unauthenticated {
 
 abstract class Unauthenticated implements AppStartState {
   const factory Unauthenticated() = _$Unauthenticated;
-}
-
-/// @nodoc
-abstract class _$InternetUnAvailableCopyWith<$Res> {
-  factory _$InternetUnAvailableCopyWith(_InternetUnAvailable value,
-          $Res Function(_InternetUnAvailable) then) =
-      __$InternetUnAvailableCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$InternetUnAvailableCopyWithImpl<$Res>
-    extends _$AppStartStateCopyWithImpl<$Res>
-    implements _$InternetUnAvailableCopyWith<$Res> {
-  __$InternetUnAvailableCopyWithImpl(
-      _InternetUnAvailable _value, $Res Function(_InternetUnAvailable) _then)
-      : super(_value, (v) => _then(v as _InternetUnAvailable));
-
-  @override
-  _InternetUnAvailable get _value => super._value as _InternetUnAvailable;
-}
-
-/// @nodoc
-
-class _$_InternetUnAvailable implements _InternetUnAvailable {
-  const _$_InternetUnAvailable();
-
-  @override
-  String toString() {
-    return 'AppStartState.internetUnAvailable()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _InternetUnAvailable);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() unauthenticated,
-    required TResult Function() internetUnAvailable,
-    required TResult Function() authenticated,
-  }) {
-    return internetUnAvailable();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? unauthenticated,
-    TResult Function()? internetUnAvailable,
-    TResult Function()? authenticated,
-  }) {
-    return internetUnAvailable?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? unauthenticated,
-    TResult Function()? internetUnAvailable,
-    TResult Function()? authenticated,
-    required TResult orElse(),
-  }) {
-    if (internetUnAvailable != null) {
-      return internetUnAvailable();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Unauthenticated value) unauthenticated,
-    required TResult Function(_InternetUnAvailable value) internetUnAvailable,
-    required TResult Function(AppAuthenticated value) authenticated,
-  }) {
-    return internetUnAvailable(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Unauthenticated value)? unauthenticated,
-    TResult Function(_InternetUnAvailable value)? internetUnAvailable,
-    TResult Function(AppAuthenticated value)? authenticated,
-  }) {
-    return internetUnAvailable?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Unauthenticated value)? unauthenticated,
-    TResult Function(_InternetUnAvailable value)? internetUnAvailable,
-    TResult Function(AppAuthenticated value)? authenticated,
-    required TResult orElse(),
-  }) {
-    if (internetUnAvailable != null) {
-      return internetUnAvailable(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _InternetUnAvailable implements AppStartState {
-  const factory _InternetUnAvailable() = _$_InternetUnAvailable;
 }
 
 /// @nodoc
@@ -499,7 +360,6 @@ class _$AppAuthenticated implements AppAuthenticated {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() unauthenticated,
-    required TResult Function() internetUnAvailable,
     required TResult Function() authenticated,
   }) {
     return authenticated();
@@ -510,7 +370,6 @@ class _$AppAuthenticated implements AppAuthenticated {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? unauthenticated,
-    TResult Function()? internetUnAvailable,
     TResult Function()? authenticated,
   }) {
     return authenticated?.call();
@@ -521,7 +380,6 @@ class _$AppAuthenticated implements AppAuthenticated {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? unauthenticated,
-    TResult Function()? internetUnAvailable,
     TResult Function()? authenticated,
     required TResult orElse(),
   }) {
@@ -536,7 +394,6 @@ class _$AppAuthenticated implements AppAuthenticated {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(Unauthenticated value) unauthenticated,
-    required TResult Function(_InternetUnAvailable value) internetUnAvailable,
     required TResult Function(AppAuthenticated value) authenticated,
   }) {
     return authenticated(this);
@@ -547,7 +404,6 @@ class _$AppAuthenticated implements AppAuthenticated {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(Unauthenticated value)? unauthenticated,
-    TResult Function(_InternetUnAvailable value)? internetUnAvailable,
     TResult Function(AppAuthenticated value)? authenticated,
   }) {
     return authenticated?.call(this);
@@ -558,7 +414,6 @@ class _$AppAuthenticated implements AppAuthenticated {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(Unauthenticated value)? unauthenticated,
-    TResult Function(_InternetUnAvailable value)? internetUnAvailable,
     TResult Function(AppAuthenticated value)? authenticated,
     required TResult orElse(),
   }) {

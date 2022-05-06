@@ -2,12 +2,9 @@
 import 'package:auto_route/auto_route.dart';
 
 // Project imports:
-import 'package:flutter_boilerplate/feature/auth/widget/sign_in_page.dart';
-import 'package:flutter_boilerplate/feature/auth/widget/sign_up_page.dart';
+import 'package:flutter_boilerplate/feature/auth/widget/login_screen.dart';
 
-const signInRouter = AutoRoute(
-  path: '/signIn',
-  page: SignInPage,
+const loginRoute = AutoRoute(
+  path: '/login',
+  page: LoginScreen,
 );
-
-const signUpRouter = AutoRoute(path: '/signUp', page: SignUpPage);

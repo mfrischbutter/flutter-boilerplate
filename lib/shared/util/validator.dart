@@ -26,10 +26,6 @@ class Validator {
     if (value.length < 5) {
       return false;
     }
-    // bool passValid = RegExp(
-    //         "^(?=.{8,32}\$)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%^&*(),.?:{}|<>]).*")
-    //     .hasMatch(value);
-    //return passValid;
 
     return true;
   }

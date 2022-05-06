@@ -9,7 +9,5 @@ class AppStartState with _$AppStartState {
 
   const factory AppStartState.unauthenticated() = Unauthenticated;
 
-  const factory AppStartState.internetUnAvailable() = _InternetUnAvailable;
-
   const factory AppStartState.authenticated() = AppAuthenticated;
 }

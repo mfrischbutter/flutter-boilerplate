@@ -5,6 +5,7 @@ import 'dart:io';
 // Flutter imports:
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/shared/route/router.gr.dart';
 
 // Package imports:
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -13,7 +14,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_boilerplate/app/widget/app.dart';
 import 'package:flutter_boilerplate/shared/http/http_override.dart';
 import 'package:flutter_boilerplate/shared/util/logger.dart';
-import 'package:flutter_boilerplate/shared/util/platform_type.dart';
 
 void start() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,17 +24,12 @@ void start() async {
     log(details.exceptionAsString(), stackTrace: details.stack);
   };
 
-  final platformType = detectPlatformType();
-
   if (kReleaseMode) {
     debugPrint = (String? message, {int? wrapWidth}) {};
   }
 
   runApp(ProviderScope(
-    overrides: [
-      platformTypeProvider.overrideWithValue(platformType),
-    ],
     observers: [Logger()],
-    child: App(),
+    child: const App(),
   ));
 }

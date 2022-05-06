@@ -12,20 +12,8 @@ class HomeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
-        title: Text('home screen'),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.adjust),
-            onPressed: () {
-              ref.read(homeProvider.notifier).logout();
-            },
-          ),
-        ],
-      ),
-      body: const Text('HOME SCREEN'),
+    return const Scaffold(
+      body: Text('HOME SCREEN'),
     );
   }
 }
