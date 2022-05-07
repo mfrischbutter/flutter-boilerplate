@@ -698,11 +698,12 @@ class _$_AppExceptionErrorMessage implements _AppExceptionErrorMessage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _AppExceptionErrorMessage &&
-            (identical(other.message, message) || other.message == message));
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, message);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override

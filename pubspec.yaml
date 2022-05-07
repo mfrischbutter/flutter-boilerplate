@@ -49,7 +49,6 @@ dev_dependencies:
   very_good_performance: ^0.0.4
 
 flutter:
-  generate: true
   uses-material-design: true
 
   assets:

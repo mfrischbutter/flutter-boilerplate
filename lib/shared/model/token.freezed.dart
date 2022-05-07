@@ -118,11 +118,12 @@ class _$_Token implements _Token {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Token &&
-            (identical(other.token, token) || other.token == token));
+            const DeepCollectionEquality().equals(other.token, token));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, token);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(token));
 
   @JsonKey(ignore: true)
   @override

@@ -7,6 +7,8 @@
 // **************************************************************************
 // AutoRouteGenerator
 // **************************************************************************
+//
+// ignore_for_file: type=lint
 
 import 'package:auto_route/auto_route.dart' as _i4;
 import 'package:flutter/material.dart' as _i5;
@@ -31,10 +33,8 @@ class AppRouter extends _i4.RootStackRouter {
           routeData: routeData, child: const _i2.HomeScreen());
     },
     LoginRoute.name: (routeData) {
-      final args = routeData.argsAs<LoginRouteArgs>(
-          orElse: () => const LoginRouteArgs());
       return _i4.AdaptivePage<dynamic>(
-          routeData: routeData, child: _i3.LoginScreen(key: args.key));
+          routeData: routeData, child: const _i3.LoginScreen());
     }
   };
 
@@ -46,30 +46,26 @@ class AppRouter extends _i4.RootStackRouter {
       ];
 }
 
-/// generated route for [_i1.SplashScreen]
+/// generated route for
+/// [_i1.SplashScreen]
 class SplashRoute extends _i4.PageRouteInfo<void> {
-  const SplashRoute() : super(name, path: '/');
+  const SplashRoute() : super(SplashRoute.name, path: '/');
 
   static const String name = 'SplashRoute';
 }
 
-/// generated route for [_i2.HomeScreen]
+/// generated route for
+/// [_i2.HomeScreen]
 class HomeRoute extends _i4.PageRouteInfo<void> {
-  const HomeRoute() : super(name, path: '/home');
+  const HomeRoute() : super(HomeRoute.name, path: '/home');
 
   static const String name = 'HomeRoute';
 }
 
-/// generated route for [_i3.LoginScreen]
-class LoginRoute extends _i4.PageRouteInfo<LoginRouteArgs> {
-  LoginRoute({_i5.Key? key})
-      : super(name, path: '/login', args: LoginRouteArgs(key: key));
+/// generated route for
+/// [_i3.LoginScreen]
+class LoginRoute extends _i4.PageRouteInfo<void> {
+  const LoginRoute() : super(LoginRoute.name, path: '/login');
 
   static const String name = 'LoginRoute';
-}
-
-class LoginRouteArgs {
-  const LoginRouteArgs({this.key});
-
-  final _i5.Key? key;
 }
