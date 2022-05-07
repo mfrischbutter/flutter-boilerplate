@@ -1,11 +1,8 @@
-// Dart imports:
 import 'dart:io';
 
-// Package imports:
 import 'package:dio/dio.dart';
-
-// Project imports:
 import 'package:flutter_boilerplate/shared/http/interceptor/dio_connectivity_request_retrier.dart';
+import 'package:sentry/sentry.dart';
 
 class RetryOnConnectionChangeInterceptor extends Interceptor {
   final DioConnectivityRequestRetrier requestRetrier;
@@ -19,7 +16,13 @@ class RetryOnConnectionChangeInterceptor extends Interceptor {
     if (_shouldRetry(err)) {
       try {
         requestRetrier.scheduleRequestRetry(err.requestOptions);
-      } catch (e) {}
+      } catch (e) {
+        Sentry.captureException(
+          e,
+          stackTrace: StackTrace.current,
+          hint: 'Unable to schedule request retry',
+        );
+      }
     }
   }
 

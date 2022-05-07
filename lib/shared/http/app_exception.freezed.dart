@@ -25,6 +25,14 @@ class _$AppExceptionTearOff {
     return const AppExceptionUnauthorized();
   }
 
+  AppExceptionNotFound notFound() {
+    return const AppExceptionNotFound();
+  }
+
+  AppExceptionForbidden forbidden() {
+    return const AppExceptionForbidden();
+  }
+
   _AppExceptionErrorMessage errorWithMessage(String message) {
     return _AppExceptionErrorMessage(
       message,
@@ -45,6 +53,8 @@ mixin _$AppException {
   TResult when<TResult extends Object?>({
     required TResult Function() connectivity,
     required TResult Function() unauthorized,
+    required TResult Function() notFound,
+    required TResult Function() forbidden,
     required TResult Function(String message) errorWithMessage,
     required TResult Function() error,
   }) =>
@@ -53,6 +63,8 @@ mixin _$AppException {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? connectivity,
     TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
     TResult Function(String message)? errorWithMessage,
     TResult Function()? error,
   }) =>
@@ -61,6 +73,8 @@ mixin _$AppException {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? connectivity,
     TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
     TResult Function(String message)? errorWithMessage,
     TResult Function()? error,
     required TResult orElse(),
@@ -70,6 +84,8 @@ mixin _$AppException {
   TResult map<TResult extends Object?>({
     required TResult Function(AppExceptionConnectivity value) connectivity,
     required TResult Function(AppExceptionUnauthorized value) unauthorized,
+    required TResult Function(AppExceptionNotFound value) notFound,
+    required TResult Function(AppExceptionForbidden value) forbidden,
     required TResult Function(_AppExceptionErrorMessage value) errorWithMessage,
     required TResult Function(_AppExceptionError value) error,
   }) =>
@@ -78,6 +94,8 @@ mixin _$AppException {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(AppExceptionConnectivity value)? connectivity,
     TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
     TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
     TResult Function(_AppExceptionError value)? error,
   }) =>
@@ -86,6 +104,8 @@ mixin _$AppException {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppExceptionConnectivity value)? connectivity,
     TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
     TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
     TResult Function(_AppExceptionError value)? error,
     required TResult orElse(),
@@ -153,6 +173,8 @@ class _$AppExceptionConnectivity implements AppExceptionConnectivity {
   TResult when<TResult extends Object?>({
     required TResult Function() connectivity,
     required TResult Function() unauthorized,
+    required TResult Function() notFound,
+    required TResult Function() forbidden,
     required TResult Function(String message) errorWithMessage,
     required TResult Function() error,
   }) {
@@ -164,6 +186,8 @@ class _$AppExceptionConnectivity implements AppExceptionConnectivity {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? connectivity,
     TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
     TResult Function(String message)? errorWithMessage,
     TResult Function()? error,
   }) {
@@ -175,6 +199,8 @@ class _$AppExceptionConnectivity implements AppExceptionConnectivity {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? connectivity,
     TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
     TResult Function(String message)? errorWithMessage,
     TResult Function()? error,
     required TResult orElse(),
@@ -190,6 +216,8 @@ class _$AppExceptionConnectivity implements AppExceptionConnectivity {
   TResult map<TResult extends Object?>({
     required TResult Function(AppExceptionConnectivity value) connectivity,
     required TResult Function(AppExceptionUnauthorized value) unauthorized,
+    required TResult Function(AppExceptionNotFound value) notFound,
+    required TResult Function(AppExceptionForbidden value) forbidden,
     required TResult Function(_AppExceptionErrorMessage value) errorWithMessage,
     required TResult Function(_AppExceptionError value) error,
   }) {
@@ -201,6 +229,8 @@ class _$AppExceptionConnectivity implements AppExceptionConnectivity {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(AppExceptionConnectivity value)? connectivity,
     TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
     TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
     TResult Function(_AppExceptionError value)? error,
   }) {
@@ -212,6 +242,8 @@ class _$AppExceptionConnectivity implements AppExceptionConnectivity {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppExceptionConnectivity value)? connectivity,
     TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
     TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
     TResult Function(_AppExceptionError value)? error,
     required TResult orElse(),
@@ -271,6 +303,8 @@ class _$AppExceptionUnauthorized implements AppExceptionUnauthorized {
   TResult when<TResult extends Object?>({
     required TResult Function() connectivity,
     required TResult Function() unauthorized,
+    required TResult Function() notFound,
+    required TResult Function() forbidden,
     required TResult Function(String message) errorWithMessage,
     required TResult Function() error,
   }) {
@@ -282,6 +316,8 @@ class _$AppExceptionUnauthorized implements AppExceptionUnauthorized {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? connectivity,
     TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
     TResult Function(String message)? errorWithMessage,
     TResult Function()? error,
   }) {
@@ -293,6 +329,8 @@ class _$AppExceptionUnauthorized implements AppExceptionUnauthorized {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? connectivity,
     TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
     TResult Function(String message)? errorWithMessage,
     TResult Function()? error,
     required TResult orElse(),
@@ -308,6 +346,8 @@ class _$AppExceptionUnauthorized implements AppExceptionUnauthorized {
   TResult map<TResult extends Object?>({
     required TResult Function(AppExceptionConnectivity value) connectivity,
     required TResult Function(AppExceptionUnauthorized value) unauthorized,
+    required TResult Function(AppExceptionNotFound value) notFound,
+    required TResult Function(AppExceptionForbidden value) forbidden,
     required TResult Function(_AppExceptionErrorMessage value) errorWithMessage,
     required TResult Function(_AppExceptionError value) error,
   }) {
@@ -319,6 +359,8 @@ class _$AppExceptionUnauthorized implements AppExceptionUnauthorized {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(AppExceptionConnectivity value)? connectivity,
     TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
     TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
     TResult Function(_AppExceptionError value)? error,
   }) {
@@ -330,6 +372,8 @@ class _$AppExceptionUnauthorized implements AppExceptionUnauthorized {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppExceptionConnectivity value)? connectivity,
     TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
     TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
     TResult Function(_AppExceptionError value)? error,
     required TResult orElse(),
@@ -343,6 +387,264 @@ class _$AppExceptionUnauthorized implements AppExceptionUnauthorized {
 
 abstract class AppExceptionUnauthorized implements AppException {
   const factory AppExceptionUnauthorized() = _$AppExceptionUnauthorized;
+}
+
+/// @nodoc
+abstract class $AppExceptionNotFoundCopyWith<$Res> {
+  factory $AppExceptionNotFoundCopyWith(AppExceptionNotFound value,
+          $Res Function(AppExceptionNotFound) then) =
+      _$AppExceptionNotFoundCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$AppExceptionNotFoundCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res>
+    implements $AppExceptionNotFoundCopyWith<$Res> {
+  _$AppExceptionNotFoundCopyWithImpl(
+      AppExceptionNotFound _value, $Res Function(AppExceptionNotFound) _then)
+      : super(_value, (v) => _then(v as AppExceptionNotFound));
+
+  @override
+  AppExceptionNotFound get _value => super._value as AppExceptionNotFound;
+}
+
+/// @nodoc
+
+class _$AppExceptionNotFound implements AppExceptionNotFound {
+  const _$AppExceptionNotFound();
+
+  @override
+  String toString() {
+    return 'AppException.notFound()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is AppExceptionNotFound);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() connectivity,
+    required TResult Function() unauthorized,
+    required TResult Function() notFound,
+    required TResult Function() forbidden,
+    required TResult Function(String message) errorWithMessage,
+    required TResult Function() error,
+  }) {
+    return notFound();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? connectivity,
+    TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
+    TResult Function(String message)? errorWithMessage,
+    TResult Function()? error,
+  }) {
+    return notFound?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? connectivity,
+    TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
+    TResult Function(String message)? errorWithMessage,
+    TResult Function()? error,
+    required TResult orElse(),
+  }) {
+    if (notFound != null) {
+      return notFound();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AppExceptionConnectivity value) connectivity,
+    required TResult Function(AppExceptionUnauthorized value) unauthorized,
+    required TResult Function(AppExceptionNotFound value) notFound,
+    required TResult Function(AppExceptionForbidden value) forbidden,
+    required TResult Function(_AppExceptionErrorMessage value) errorWithMessage,
+    required TResult Function(_AppExceptionError value) error,
+  }) {
+    return notFound(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppExceptionConnectivity value)? connectivity,
+    TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
+    TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
+    TResult Function(_AppExceptionError value)? error,
+  }) {
+    return notFound?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AppExceptionConnectivity value)? connectivity,
+    TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
+    TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
+    TResult Function(_AppExceptionError value)? error,
+    required TResult orElse(),
+  }) {
+    if (notFound != null) {
+      return notFound(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AppExceptionNotFound implements AppException {
+  const factory AppExceptionNotFound() = _$AppExceptionNotFound;
+}
+
+/// @nodoc
+abstract class $AppExceptionForbiddenCopyWith<$Res> {
+  factory $AppExceptionForbiddenCopyWith(AppExceptionForbidden value,
+          $Res Function(AppExceptionForbidden) then) =
+      _$AppExceptionForbiddenCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$AppExceptionForbiddenCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res>
+    implements $AppExceptionForbiddenCopyWith<$Res> {
+  _$AppExceptionForbiddenCopyWithImpl(
+      AppExceptionForbidden _value, $Res Function(AppExceptionForbidden) _then)
+      : super(_value, (v) => _then(v as AppExceptionForbidden));
+
+  @override
+  AppExceptionForbidden get _value => super._value as AppExceptionForbidden;
+}
+
+/// @nodoc
+
+class _$AppExceptionForbidden implements AppExceptionForbidden {
+  const _$AppExceptionForbidden();
+
+  @override
+  String toString() {
+    return 'AppException.forbidden()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is AppExceptionForbidden);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() connectivity,
+    required TResult Function() unauthorized,
+    required TResult Function() notFound,
+    required TResult Function() forbidden,
+    required TResult Function(String message) errorWithMessage,
+    required TResult Function() error,
+  }) {
+    return forbidden();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? connectivity,
+    TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
+    TResult Function(String message)? errorWithMessage,
+    TResult Function()? error,
+  }) {
+    return forbidden?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? connectivity,
+    TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
+    TResult Function(String message)? errorWithMessage,
+    TResult Function()? error,
+    required TResult orElse(),
+  }) {
+    if (forbidden != null) {
+      return forbidden();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AppExceptionConnectivity value) connectivity,
+    required TResult Function(AppExceptionUnauthorized value) unauthorized,
+    required TResult Function(AppExceptionNotFound value) notFound,
+    required TResult Function(AppExceptionForbidden value) forbidden,
+    required TResult Function(_AppExceptionErrorMessage value) errorWithMessage,
+    required TResult Function(_AppExceptionError value) error,
+  }) {
+    return forbidden(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppExceptionConnectivity value)? connectivity,
+    TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
+    TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
+    TResult Function(_AppExceptionError value)? error,
+  }) {
+    return forbidden?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AppExceptionConnectivity value)? connectivity,
+    TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
+    TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
+    TResult Function(_AppExceptionError value)? error,
+    required TResult orElse(),
+  }) {
+    if (forbidden != null) {
+      return forbidden(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AppExceptionForbidden implements AppException {
+  const factory AppExceptionForbidden() = _$AppExceptionForbidden;
 }
 
 /// @nodoc
@@ -413,6 +715,8 @@ class _$_AppExceptionErrorMessage implements _AppExceptionErrorMessage {
   TResult when<TResult extends Object?>({
     required TResult Function() connectivity,
     required TResult Function() unauthorized,
+    required TResult Function() notFound,
+    required TResult Function() forbidden,
     required TResult Function(String message) errorWithMessage,
     required TResult Function() error,
   }) {
@@ -424,6 +728,8 @@ class _$_AppExceptionErrorMessage implements _AppExceptionErrorMessage {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? connectivity,
     TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
     TResult Function(String message)? errorWithMessage,
     TResult Function()? error,
   }) {
@@ -435,6 +741,8 @@ class _$_AppExceptionErrorMessage implements _AppExceptionErrorMessage {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? connectivity,
     TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
     TResult Function(String message)? errorWithMessage,
     TResult Function()? error,
     required TResult orElse(),
@@ -450,6 +758,8 @@ class _$_AppExceptionErrorMessage implements _AppExceptionErrorMessage {
   TResult map<TResult extends Object?>({
     required TResult Function(AppExceptionConnectivity value) connectivity,
     required TResult Function(AppExceptionUnauthorized value) unauthorized,
+    required TResult Function(AppExceptionNotFound value) notFound,
+    required TResult Function(AppExceptionForbidden value) forbidden,
     required TResult Function(_AppExceptionErrorMessage value) errorWithMessage,
     required TResult Function(_AppExceptionError value) error,
   }) {
@@ -461,6 +771,8 @@ class _$_AppExceptionErrorMessage implements _AppExceptionErrorMessage {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(AppExceptionConnectivity value)? connectivity,
     TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
     TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
     TResult Function(_AppExceptionError value)? error,
   }) {
@@ -472,6 +784,8 @@ class _$_AppExceptionErrorMessage implements _AppExceptionErrorMessage {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppExceptionConnectivity value)? connectivity,
     TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
     TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
     TResult Function(_AppExceptionError value)? error,
     required TResult orElse(),
@@ -536,6 +850,8 @@ class _$_AppExceptionError implements _AppExceptionError {
   TResult when<TResult extends Object?>({
     required TResult Function() connectivity,
     required TResult Function() unauthorized,
+    required TResult Function() notFound,
+    required TResult Function() forbidden,
     required TResult Function(String message) errorWithMessage,
     required TResult Function() error,
   }) {
@@ -547,6 +863,8 @@ class _$_AppExceptionError implements _AppExceptionError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? connectivity,
     TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
     TResult Function(String message)? errorWithMessage,
     TResult Function()? error,
   }) {
@@ -558,6 +876,8 @@ class _$_AppExceptionError implements _AppExceptionError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? connectivity,
     TResult Function()? unauthorized,
+    TResult Function()? notFound,
+    TResult Function()? forbidden,
     TResult Function(String message)? errorWithMessage,
     TResult Function()? error,
     required TResult orElse(),
@@ -573,6 +893,8 @@ class _$_AppExceptionError implements _AppExceptionError {
   TResult map<TResult extends Object?>({
     required TResult Function(AppExceptionConnectivity value) connectivity,
     required TResult Function(AppExceptionUnauthorized value) unauthorized,
+    required TResult Function(AppExceptionNotFound value) notFound,
+    required TResult Function(AppExceptionForbidden value) forbidden,
     required TResult Function(_AppExceptionErrorMessage value) errorWithMessage,
     required TResult Function(_AppExceptionError value) error,
   }) {
@@ -584,6 +906,8 @@ class _$_AppExceptionError implements _AppExceptionError {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(AppExceptionConnectivity value)? connectivity,
     TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
     TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
     TResult Function(_AppExceptionError value)? error,
   }) {
@@ -595,6 +919,8 @@ class _$_AppExceptionError implements _AppExceptionError {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppExceptionConnectivity value)? connectivity,
     TResult Function(AppExceptionUnauthorized value)? unauthorized,
+    TResult Function(AppExceptionNotFound value)? notFound,
+    TResult Function(AppExceptionForbidden value)? forbidden,
     TResult Function(_AppExceptionErrorMessage value)? errorWithMessage,
     TResult Function(_AppExceptionError value)? error,
     required TResult orElse(),

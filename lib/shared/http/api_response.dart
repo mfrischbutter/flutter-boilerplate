@@ -9,5 +9,6 @@ part 'api_response.freezed.dart';
 @freezed
 class APIResponse<T> with _$APIResponse<T> {
   const factory APIResponse.success(T value) = APISuccess<T>;
+
   const factory APIResponse.error(AppException exception) = APIError;
 }
