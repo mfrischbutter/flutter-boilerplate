@@ -1,10 +1,7 @@
-// Flutter imports:
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/shared/util/validator.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-
-// Project imports:
 import 'package:flutter_boilerplate/feature/auth/provider/auth_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 

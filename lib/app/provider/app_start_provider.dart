@@ -1,9 +1,6 @@
-// Package imports:
 import 'package:flutter_boilerplate/app/widget/app.dart';
 import 'package:flutter_boilerplate/shared/route/router.gr.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-// Project imports:
 import 'package:flutter_boilerplate/app/state/app_start_state.dart';
 import 'package:flutter_boilerplate/feature/auth/provider/auth_provider.dart';
 import 'package:flutter_boilerplate/shared/repository/token_repository.dart';

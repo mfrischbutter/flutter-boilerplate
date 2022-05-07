@@ -1,4 +1,3 @@
-// Package imports:
 import 'package:flutter_boilerplate/feature/auth/model/auth_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_boilerplate/feature/auth/repository/auth_repository.dart';

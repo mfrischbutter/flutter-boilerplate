@@ -1,4 +1,3 @@
-// Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'app_start_state.freezed.dart';

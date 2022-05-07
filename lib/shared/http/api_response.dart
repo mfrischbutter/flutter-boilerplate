@@ -1,7 +1,4 @@
-// Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-// Project imports:
 import 'package:flutter_boilerplate/shared/http/app_exception.dart';
 
 part 'api_response.freezed.dart';

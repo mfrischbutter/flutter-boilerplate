@@ -1,4 +1,3 @@
-// Dart imports:
 import 'dart:io';
 
 class MyHttpOverrides extends HttpOverrides {
