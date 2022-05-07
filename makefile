@@ -1,5 +1,3 @@
-all: lint format run_dev_mobile
-
 help: ## This help dialog.
 	@IFS=$$'\n' ; \
 	help_lines=(`fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//'`); \
@@ -10,10 +8,6 @@ help: ## This help dialog.
 		help_info=`echo $${help_split[2]} | sed -e 's/^ *//' -e 's/ *$$//'` ; \
 		printf "%-30s %s\n" $$help_command $$help_info ; \
 	done
-
-run_unit: ## Runs unit tests
-	@echo "╠ Running the tests"
-	@flutter test || (echo "Error while running tests"; exit 1)
 
 clean: ## Cleans the environment
 	@echo "╠ Cleaning the project..."
@@ -44,36 +38,33 @@ upgrade: clean ## Upgrades dependencies
 	@echo "╠ Upgrading dependencies..."
 	@flutter pub upgrade
 
-run_dev_web: ## Runs the web application in dev
+run: ## Runs the mobile application in production
 	@echo "╠ Running the app"
-	@flutter run -d chrome --dart-define=ENVIRONMENT=dev
+	@flutter run --flavor development -t lib/main.dart
 
-run_dev_mobile: ## Runs the mobile application in dev
+run_staging: ## Runs the mobile application in staging
+	@echo "╠ Running the app"
+	@flutter run --flavor development -t lib/main_staging.dart
+
+
+run_dev: ## Runs the mobile application in dev
 	@echo "╠ Running the app"
 	@flutter run --flavor development -t lib/main_development.dart
 
-run_stg_mobile: ## Runs the mobile application in dev
-	@echo "╠ Running the app"
-	@flutter run --flavor staging -t lib/main_staging.dart
-
-run_prd_mobile: ## Runs the mobile application in dev
-	@echo "╠ Running the app"
-	@flutter run --flavor production -t lib/main_production.dart
-
-build_apk_dev: ## Runs the mobile application in dev
+build_apk_dev: ## Build the mobile application in dev
 	@flutter clean
 	@flutter pub get
 	@flutter build apk --flavor development -t lib/main_development.dart
 
-build_apk_stg: ## Runs the mobile application in staging
+build_apk_staging: ## Build the mobile application in staging
 	@flutter clean
 	@flutter pub get
 	@flutter build apk --flavor staging -t lib/main_staging.dart
 
-build_apk_prod: ## Runs the mobile application in prod
+build_apk_prod: ## Build the mobile application in prod
 	@flutter clean
 	@flutter pub get
-	@flutter build apk --flavor production -t lib/main_production.dart
+	@flutter build apk --flavor production -t lib/main.dart
 
 purge: ## Purges the Flutter
 	@pod deintegrate
