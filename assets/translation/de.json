@@ -1,0 +1,17 @@
+{
+    "form": {
+        "label": {
+            "email": "E-Mail",
+            "username": "Nutername",
+            "password": "Passwort"
+        },
+        "error": {
+            "email": "Bitte eine gültige E-Mail-Adresse eingeben",
+            "username": "Bitte einen Nuternamen eingeben",
+            "password": "Bitte ein Passwort eingeben"
+        }
+    },
+    "btn": {
+        "login": "Anmelden"
+    }
+}

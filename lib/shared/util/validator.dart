@@ -9,9 +9,6 @@ class Validator {
     if (value.isEmpty) {
       return false;
     }
-    if (value.length < 4) {
-      return false;
-    }
 
     return EmailValidator.validate(value);
   }
@@ -21,9 +18,6 @@ class Validator {
       return false;
     }
     if (value.isEmpty) {
-      return false;
-    }
-    if (value.length < 5) {
       return false;
     }
 

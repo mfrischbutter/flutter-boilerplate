@@ -3,29 +3,38 @@
 ///  FlutterGen
 /// *****************************************************
 
-// ignore_for_file: directives_ordering
+// ignore_for_file: directives_ordering,unnecessary_import
 
-// Flutter imports:
 import 'package:flutter/widgets.dart';
 
 class $AssetsEnvGen {
   const $AssetsEnvGen();
 
+  /// File path: assets/env/.env.development
   String get envDevelopment => 'assets/env/.env.development';
+
+  /// File path: assets/env/.env.production
   String get envProduction => 'assets/env/.env.production';
+
+  /// File path: assets/env/.env.staging
   String get envStaging => 'assets/env/.env.staging';
 }
 
-class $AssetsImageGen {
-  const $AssetsImageGen();
+class $AssetsTranslationGen {
+  const $AssetsTranslationGen();
+
+  /// File path: assets/translation/de.json
+  String get de => 'assets/translation/de.json';
+
+  /// File path: assets/translation/en.json
+  String get en => 'assets/translation/en.json';
 }
 
 class Assets {
   Assets._();
 
-  static const AssetGenImage appLogo = AssetGenImage('assets/app_logo.png');
   static const $AssetsEnvGen env = $AssetsEnvGen();
-  static const $AssetsImageGen image = $AssetsImageGen();
+  static const $AssetsTranslationGen translation = $AssetsTranslationGen();
 }
 
 class AssetGenImage extends AssetImage {
