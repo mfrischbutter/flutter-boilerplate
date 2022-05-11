@@ -1,13 +1,17 @@
-# Register bricks which can be consumed via the Mason CLI.
-# https://github.com/felangel/mason
 bricks:
-  # Sample Brick
-  # Run `mason make hello` to try it out.
-  hello: 0.1.0+1
-  # Bricks can also be imported via git url.
-  # Uncomment the following lines to import
-  # a brick from a remote git url.
-  # widget:
-  #   git:
-  #     url: https://github.com/felangel/mason.git
-  #     path: bricks/widget
+  flutter-feature:
+    git:
+      url: https://github.com/mfrischbutter/mason.git
+      path: bricks/flutter/feature
+  flutter-provider:
+    git:
+      url: https://github.com/mfrischbutter/mason.git
+      path: bricks/flutter/provider
+  flutter-state:
+    git:
+      url: https://github.com/mfrischbutter/mason.git
+      path: bricks/flutter/state
+  flutter-repository:
+    git:
+      url: https://github.com/mfrischbutter/mason.git
+      path: bricks/flutter/repository
