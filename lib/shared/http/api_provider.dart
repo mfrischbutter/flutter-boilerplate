@@ -31,42 +31,6 @@ class ApiProvider {
       SentryInterceptor(),
     );
 
-    // _dio.interceptors.add(
-    //   RetryInterceptor(
-    //     dio: _dio,
-    //     logPrint: print,
-    //     retries: 3,
-    //     retryDelays: const [
-    //       Duration(seconds: 1),
-    //       Duration(seconds: 2),
-    //       Duration(seconds: 5),
-    //     ],
-    //   ),
-    // );
-
-    _dio.interceptors.add(
-      RetryOnConnectionChangeInterceptor(
-        requestRetrier: DioConnectivityRequestRetrier(
-          dio: _dio,
-          connectivity: Connectivity(),
-        ),
-      ),
-    );
-
-    // _dio.interceptors.add(
-    //   InterceptorsWrapper(
-    //     onError: (error, handler) async {
-    //       if (error.response != null) {
-    //         if (error.response!.statusCode == 401) {
-    //           await refreshToken();
-    //           handler.resolve(await _retry(error.requestOptions));
-    //         }
-    //       }
-    //       handler.reject(error);
-    //     },
-    //   ),
-    // );
-
     if (kDebugMode) {
       _dio.interceptors.add(
         PrettyDioLogger(
@@ -77,6 +41,15 @@ class ApiProvider {
         ),
       );
     }
+
+    _dio.interceptors.add(
+      RetryOnConnectionChangeInterceptor(
+        requestRetrier: DioConnectivityRequestRetrier(
+          dio: _dio,
+          connectivity: Connectivity(),
+        ),
+      ),
+    );
   }
 
   // Future<Response<dynamic>> _retry(RequestOptions requestOptions) async {
@@ -111,9 +84,7 @@ class ApiProvider {
   late final TokenRepository _tokenRepository =
       _reader(tokenRepositoryProvider);
 
-  get baseUrl async {
-    dotenv.env['API'];
-  }
+  get baseUrl => dotenv.env['API'];
 
   Future<APIResponse> post(
     String path,
